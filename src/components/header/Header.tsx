@@ -5,10 +5,10 @@ import { TsHeading } from "../heading/Heading";
 
 export default function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <Container>
         <div>
-          <TsHeading headingLevel="h3">hello</TsHeading>
+          <TsHeading headingLevel="h3">Header</TsHeading>
         </div>
       </Container>
     </header>

@@ -1,0 +1,7 @@
+.hero{
+    margin-block: 30px;
+}
+
+.hero__info{
+    max-width: 500px;
+}
