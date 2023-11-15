@@ -2,6 +2,34 @@
     margin-block: 30px;
 }
 
+.flex__group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .hero__info{
     max-width: 500px;
 }
+
+.bg__colorSied{
+    border: 2px solid #d62828;
+    background-color: transparent;
+    background-image:  linear-gradient(hsl(44, 100%, 52%, .7) 1px, transparent 1px), linear-gradient(to right, hsl(44, 100%, 52%, .7) 1px, hsl(240, 53%, 93%, .1) 1px);
+    background-size: 20px 20px;
+}
+
+.cuboid__animation{
+    perspective: 2000px;
+    display: grid;
+    place-items: center;
+     animation: spin2 30s infinite linear;
+}
+@keyframes spin2 {
+    0% {
+      transform: perspective(600px) rotateX(0deg) rotateY(270deg) rotateZ(0deg);
+    }
+    100% {
+      transform: perspective(600px) rotateX(360deg) rotateY(630deg) rotateZ(0deg);
+    }
+  }
