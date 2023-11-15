@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./style.module.css";
 import { Container } from "../container/Container";
 import { TsHeading } from "../heading/Heading";
+import Cube from "../cube/Cube";
 export default function Hero() {
   return (
     <section className={styles.hero}>
@@ -21,6 +22,13 @@ export default function Hero() {
               eventually.
             </p>
           </div>
+          <Cube
+            width={150}
+            height={150}
+            depth={150}
+            className={styles.bg__colorSied}
+            cuboidClass={styles.cuboid__animation}
+          />
         </div>
       </Container>
     </section>

@@ -1,0 +1,54 @@
+.cuboid{
+    --width: 50px;
+    --height:50px;
+    --depth:50px;
+    height: var(--height);
+    width: var(--width);
+    position: relative;
+    transform: rotateX(-5deg) rotateY(14deg);
+    transform-style: preserve-3d;
+    transition: all 500ms ease;
+}
+
+.cuboid__side{
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+    transition: all 500ms ease;
+    display: grid;
+    place-items: center;
+}
+.cuboid__side:nth-of-type(1),
+.cuboid__side:nth-of-type(2){
+    --coviceent: -0.5;
+    height: var(--height);
+    width: var(--width);
+    transform: translate3d(0, 0, calc(var(--depth) * var(--coviceent)));
+}
+.cuboid__side:nth-of-type(2){
+    --coviceent: 0.5;
+}
+.cuboid__side:nth-of-type(3),
+.cuboid__side:nth-of-type(4){
+    --rotation: 90deg;
+    height: var(--height);
+    width: var(--depth);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateY(var(--rotation))  translate3d(0, 0, calc(var(--width) * -0.5));
+}
+.cuboid__side:nth-of-type(4){
+    --rotation: -90deg;
+}
+.cuboid__side:nth-of-type(5),
+.cuboid__side:nth-of-type(6){
+    --rotation: -90deg;
+    height: var(--depth);
+    width: var(--width);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateX(var(--rotation)) translate3d(0, 0, calc(var(--height) * -0.5));
+}
+.cuboid__side:nth-of-type(6){
+    --rotation: 90deg;
+}
