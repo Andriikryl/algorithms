@@ -3,6 +3,7 @@ import React from "react";
 import style from "./style.module.css";
 import { motion } from "framer-motion";
 import { AnimatedNumber } from "../animateValue/AnimatedNumber";
+import Button from "../button/Button";
 
 const NUMBERS = Array(50)
   .fill(1)
@@ -93,12 +94,18 @@ export function BubbleSortVisual({ fps = 15 }) {
         </div>
 
         <div className={style.button__grpup}>
-          <button disabled={playState === "sorting"} onClick={handleShuffle}>
-            Shuffle
-          </button>
-          <button disabled={playState === "complete"} onClick={handleSort}>
-            {playState === "sorting" ? "Pause" : "Sort"}
-          </button>
+          <Button
+            text="Shuffle"
+            onClick={handleShuffle}
+            disabled={playState === "sorting"}
+            hue={0}
+          />
+          <Button
+            text={playState === "sorting" ? "Pause" : "Sort"}
+            onClick={handleSort}
+            hue={200}
+            disabled={playState === "complete"}
+          />
         </div>
       </div>
 
