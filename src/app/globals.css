@@ -1,4 +1,8 @@
-
+:root {
+  --main: 255, 170, 60;
+  --alt: 120, 75, 20;
+  --black: #12100d;
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -23,11 +27,6 @@
   border: 2px solid transparent;
 }
 
-:root {
-  --main: 255, 170, 60;
-  --alt: 120, 75, 20;
-  --black: #12100d;
-}
 
 ::selection {
   background-color: rgba(var(--alt), 0.7);
