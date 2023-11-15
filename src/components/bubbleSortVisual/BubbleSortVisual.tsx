@@ -2,6 +2,7 @@
 import React from "react";
 import style from "./style.module.css";
 import { motion } from "framer-motion";
+import { AnimatedNumber } from "../animateValue/AnimatedNumber";
 
 const NUMBERS = Array(50)
   .fill(1)
@@ -87,7 +88,9 @@ export function BubbleSortVisual({ fps = 15 }) {
   return (
     <div className={style.wrapper}>
       <div className={style.control__group}>
-        <div className={style.count__box}>Comparisons: {count}</div>
+        <div className={style.count__box}>
+          Comparisons: <AnimatedNumber value={count} />
+        </div>
 
         <div className={style.button__grpup}>
           <button disabled={playState === "sorting"} onClick={handleShuffle}>
