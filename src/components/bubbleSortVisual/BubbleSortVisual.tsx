@@ -4,6 +4,7 @@ import style from "./style.module.css";
 import { motion } from "framer-motion";
 import { AnimatedNumber } from "../animateValue/AnimatedNumber";
 import Button from "../button/Button";
+import Bord from "../bord/Bord";
 
 const NUMBERS = Array(50)
   .fill(1)
@@ -114,6 +115,7 @@ export function BubbleSortVisual({ fps = 15 }) {
           <Item key={`${num}-${i}`} num={num} isHighlighted={idx === i} />
         ))}
       </div>
+      <Bord />
     </div>
   );
 }
